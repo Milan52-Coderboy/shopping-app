@@ -1,8 +1,11 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
-
+import dynamic from 'next/dynamic';
+import { Button } from 'react-bootstrap';
+import Form from 'react-bootstrap/Form';
+import { FaChevronRight } from "react-icons/fa";
+const TopNavbar = dynamic(() => import('../components/Navbar'))
+const Footer = dynamic(() => import('../components/Footer'))
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -14,100 +17,206 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        <div className={styles.description}>
-          <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>src/pages/index.tsx</code>
-          </p>
-          <div>
-            <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              By{' '}
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                className={styles.vercelLogo}
-                width={100}
-                height={24}
-                priority
-              />
-            </a>
+      <main >
+
+
+
+
+        <div className='bg-bg' style={{ paddingTop: '80px' }}>
+          <div className='container pb-5'>
+            <div className='w-50 m-auto pt-5'>
+              <h1 className='text-title-color text-center fw-bolder'>Locally Produced Delivered Direct To Your Door</h1>
+
+            </div>
+            <div className='w-50  m-auto pt-2'>
+              <p className=' text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque excepturi assumenda, nobis voluptas cupiditate non.</p>
+
+            </div>
+            <div className='w-50  m-auto pt-5' >
+              <Form.Group className='d-flex border p-2 bg-white rounded-2'>
+                <Form.Control type="text" className='me-2 landing-page-input border-0' placeholder="Enter address to find nearby shops" />
+                <Button variant="primary" type="submit">
+                  Submit
+                </Button>
+              </Form.Group>
+            </div>
           </div>
         </div>
 
-        <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
-          />
+
+
+
+
+
+
+
+
+
+
+
+
+        <div className='container mt-5 d-flex justify-content-between'>
+          <div className='w-50 pe-2'>
+            <h1 className='text-title-color fw-bolder '>Who We Are & What We Do</h1>
+            <p className='fw-semibold '>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nam accusantium, tempora expedita minima soluta?</p>
+            <div>
+              <div className='mb-3 bg-bg d-flex  justify-content-between align-items-center rounded-3 py-3 px-4'>
+                <div className='rounded-circle' style={{ height: "60px", width: "60px", background: "white" }}>
+                  <img className='w-100 h-100' src="/imgs/fruite.png" alt="fruite" />
+                </div>
+                <div>
+                  <h5 className='m-0 mb-2 text-title-color fw-bolder'>Real Product</h5>
+                  <p className='m-0'>Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div className='rounded-circle d-flex bg-primary justify-content-center text-white align-items-center' style={{ height: "30px", width: "30px", background: "white" }}>< FaChevronRight /></div>
+              </div>
+              <div className='mb-3 bg-bg d-flex justify-content-between align-items-center rounded-3 py-3 px-4'>
+                <div className='rounded-circle' style={{ height: "60px", width: "60px", background: "white" }}>
+                  <img className='w-100 h-100' src="/imgs/fruite.png" alt="fruite" />
+                </div>
+                <div>
+                  <h5 className='m-0 mb-2 text-title-color fw-bolder'>Real Product</h5>
+                  <p className='m-0'>Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div className='rounded-circle d-flex bg-primary justify-content-center text-white align-items-center' style={{ height: "30px", width: "30px", background: "white" }}>< FaChevronRight /></div>
+              </div>
+              <div className='mb-3 bg-bg d-flex justify-content-between align-items-center rounded-3 py-3 px-4'>
+                <div className='rounded-circle' style={{ height: "60px", width: "60px", background: "white" }}>
+                  <img className='w-100 h-100' src="/imgs/fruite.png" alt="fruite" />
+                </div>
+                <div>
+                  <h4 className='m-0 mb-2 text-title-color fw-bolder'>Real Product</h4>
+                  <p className='m-0'>Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div className='rounded-circle d-flex bg-primary justify-content-center text-white align-items-center' style={{ height: "30px", width: "30px", background: "white" }}>< FaChevronRight /></div>
+              </div>
+
+            </div>
+          </div>
+          <div className='w-50 '>
+            <div className='overflow-hidden' style={{ height: "444px" }}>
+              <img className='w-100 h-100' src="/imgs/delivery-info.png" alt="deliverylogo" />
+            </div>
+          </div>
         </div>
 
-        <div className={styles.grid}>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Docs <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Find in-depth information about Next.js features and&nbsp;API.
-            </p>
-          </a>
 
-          <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Learn <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Learn about Next.js in an interactive course with&nbsp;quizzes!
-            </p>
-          </a>
 
-          <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Templates <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Discover and deploy boilerplate example Next.js&nbsp;projects.
-            </p>
-          </a>
 
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Deploy <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Instantly deploy your Next.js site to a shareable URL
-              with&nbsp;Vercel.
-            </p>
-          </a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div className='bg-bg'>
+
+
+          <div className='container mt-5 '>
+            <div className='d-flex pt-5 justify-content-between'>
+              <h1 className='text-title-color fw-bolder m-0'>We Alwayes Provide You The Best In Town</h1>
+              <p className='text-center m-0 ms-5'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi hic error esse quo corrupti suscipit!lorem5 Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div className='pt-5'>
+              <img className='w-100 h-100' src="/imgs/happy-person-landing.png" alt="happy-person-landing" />
+            </div>
+            <div className='pt-5 d-flex justify-content-between align-items-center'>
+              <Button className='me-2'>Partner With Us</Button>
+              <div className='d-flex border-top border-bottom border-5 border-primary'>
+                <div className='m-3 text-end'>
+                  <h4 style={{ width: "140px" }} className='fw-bolder text-text-color'><span className='text-highlight'>5+ </span>Years Experience </h4>
+
+                </div>
+                <div className='m-3 text-end'>
+                  <h4 style={{ width: "140px" }} className='fw-bolder text-text-color'><span className='text-highlight'>100+ </span>Young Riders</h4>
+
+                </div>
+                <div className='m-3 text-end'>
+                  <h4 style={{ width: "140px" }} className='fw-bolder text-text-color'><span className='text-highlight'>5k+ </span> Regular Customers</h4>
+
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div className='position-relative container bg-primary rounded-5 p-5' style={{ marginTop: "190px" }}>
+
+
+          <div className='w-50'>
+            <h1 className='text-bg fw-bolder'>Stay Home & Get All Your Essentials From Our Market!</h1>
+            <p className='text-bg fw-bold mt-4'>Download the app now from App Store or Google Play</p>
+            <div className='mt-4 d-flex justify-content-between'>
+              <div className='mx-2'><img src="/imgs/qr-code.png" alt="qr code" /></div>
+              <div className='mx-2' ><img src="/imgs/app-store.png" alt="app store" /></div>
+              <div className='mx-2' ><img src="/imgs/google-play.png" alt="google play" /></div>
+            </div>
+          </div>
+          <div className='position-absolute bottom-0 end-0'>
+            <img src="/imgs/person-with-veg.png" alt="" />
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div className='bg-bg mt-5'>
+          <div className='container '>
+            <div>
+              <h1>We Alwayes Provide You The Best In Town</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, officiis enim voluptates reprehenderit neque quae est suscipit? Voluptatibus, pariatur excepturi?</p>
+            </div>
+            <div>
+              <div>
+                <FaChevronRight />
+                <h3></h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut, quia!</p>
+              </div>
+              <div>
+                <FaChevronRight />
+                <h3></h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut, quia!</p>
+              </div>
+              <div>
+                <FaChevronRight />
+                <h3></h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut, quia!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </main>
     </>
   )

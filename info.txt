@@ -1,0 +1,27 @@
+(feature for customer)
+-login
+-signup
+-search shop,-find shop near you,-shop by category
+-map
+-delivery products
+-all languages change
+-rating
+-receipy
+-flour near you
+-home made food deleivery
+-default(world wide UI) use case
+
+
+
+
+
+(target customer)
+-all
+
+
+what is need to be change in future
+(1)configure that where the compo call like dynamic is right or wrong
+(2)add interface in all object
+(3)work on best animation
+(4)add interface on props
+(5) replace <img> tag to <image/> tag
