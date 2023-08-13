@@ -20,13 +20,13 @@ export default function TopNavbar() {
 
     return (
         <>
-            <Navbar fixed='top' collapseOnSelect expand="lg" bg="bg" variant="bg" className='py-0 nav-style' >
+            <Navbar collapseOnSelect expand="lg" bg="bg" variant="bg" className='py-0 nav-style' >
                 <Container>
-                    <Navbar.Brand href="/" className='fw-bold fs-4 foodeliver-color'><img src="./icons/icons8-duolingo-logo-100.svg" alt="logo" />OFFR</Navbar.Brand>
+                    <Navbar.Brand href="/" className='fw-bold fs-4 foodeliver-color'><img src="./icons/icons8-duolingo-logo-100.svg" alt="logo" />SHOPPY</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav" className='fw-semibold'>
                         <Nav className="me-auto">
-                            <Nav.Link href="/home">Home</Nav.Link>
+                            <Nav.Link href="/">Home</Nav.Link>
                             <Nav.Link href="./shop">Shop</Nav.Link>
                             <Nav.Link href="/service">Service</Nav.Link>
                             <NavDropdown title="Offer" id="collasible-nav-dropdown">
